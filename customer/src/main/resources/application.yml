@@ -2,4 +2,18 @@ server:
   port: 8080
 spring:
   application:
-    name: esekelvin-default-microservice
+    name: customer
+  datasource:
+    password: abc123
+    url: jdbc:postgresql://192.168.56.101:5432/customer
+    username: esekelvin
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+
