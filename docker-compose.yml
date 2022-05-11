@@ -1,4 +1,5 @@
 services:
+  #Postgress database for Customer Microservice
   postgres:
     container_name: postgres
     image: postgres
@@ -13,7 +14,23 @@ services:
     networks:
       - postgres
     restart: unless-stopped
+  #Postgress database for Fraud Microservice
+  postgres_fraud:
+    container_name: postgres_fraud
+    image: postgres
+    environment:
+      POSTGRES_USER: esekelvin
+      POSTGRES_PASSWORD: abc123
+      PGDATA: /data/postgres
+    volumes:
+      - postgres_fraud:/data/postgres
+    ports:
+      - "5433:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
 
+  #pg admin container setup
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4
@@ -29,13 +46,14 @@ services:
     networks:
       - postgres
     restart: unless-stopped
-
+#creating docker network
 networks:
   postgres:
     driver: bridge
 
-
 volumes:
   postgres:
   pgadmin:
+  postgres_fraud:
+
 
