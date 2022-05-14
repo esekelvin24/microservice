@@ -1,9 +1,10 @@
 package com.esekelvin.customer.service;
 
+import com.esekelvin.clients.fraud.FraudCheckResponse;
+import com.esekelvin.clients.fraud.FraudClient;
 import com.esekelvin.customer.model.Customer;
 import com.esekelvin.customer.repo.CustomerRepo;
 import com.esekelvin.customer.requests.CustomerRegistrationRequest;
-import com.esekelvin.customer.response.FraudCheckResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -13,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 public class CustomerService {
     private final CustomerRepo customerRepo;
     private final RestTemplate restTemplate;
+    private final FraudClient fraudClient;
 
     public void registerCustomer(CustomerRegistrationRequest request) {
        Customer customer = Customer.builder()
@@ -28,11 +30,8 @@ public class CustomerService {
         customerRepo.saveAndFlush(customer);
 
         //todo: check if customer is a fraudster
-        FraudCheckResponse fraudCheckResponse = restTemplate.getForObject(
-                "http://FRAUD/api/v1/fraud-check/{customerId}",
-                FraudCheckResponse.class,
-                customer.getId()
-        );
+
+        FraudCheckResponse fraudCheckResponse = fraudClient.isFraudster(customer.getId());
 
         if (fraudCheckResponse.isFraudster())
         {
