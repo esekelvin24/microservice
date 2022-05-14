@@ -2,6 +2,8 @@ package com.esekelvin.customer.service;
 
 import com.esekelvin.clients.fraud.FraudCheckResponse;
 import com.esekelvin.clients.fraud.FraudClient;
+import com.esekelvin.clients.notification.NotificationClient;
+import com.esekelvin.clients.notification.NotificationRequest;
 import com.esekelvin.customer.model.Customer;
 import com.esekelvin.customer.repo.CustomerRepo;
 import com.esekelvin.customer.requests.CustomerRegistrationRequest;
@@ -13,8 +15,8 @@ import org.springframework.web.client.RestTemplate;
 @AllArgsConstructor
 public class CustomerService {
     private final CustomerRepo customerRepo;
-    private final RestTemplate restTemplate;
     private final FraudClient fraudClient;
+    private final NotificationClient notificationClient;
 
     public void registerCustomer(CustomerRegistrationRequest request) {
        Customer customer = Customer.builder()
@@ -40,5 +42,14 @@ public class CustomerService {
 
 
         //todo: send notification
+        //todo: make async and add to a queue
+        notificationClient.sendNotification(
+                new NotificationRequest(
+                        customer.getId(),
+                        customer.getEmail(),
+                        String.format("Hi %s, You just did it", customer.getFirstName())
+                )
+        );
+
     }
 }

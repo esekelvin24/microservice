@@ -10,6 +10,7 @@
         <module name="eureka_server" />
         <module name="clients" />
         <module name="fraud" />
+        <module name="notifications" />
         <module name="customer" />
       </profile>
     </annotationProcessing>
@@ -20,6 +21,8 @@
       <module name="eureka_server" target="17" />
       <module name="fraud" target="17" />
       <module name="microservices" target="17" />
+      <module name="notification" target="17" />
+      <module name="notifications" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
