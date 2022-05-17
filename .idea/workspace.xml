@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3160349c-a53c-49b6-92dc-587549b07679" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/notifications/notifications.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_brave_2_16_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_activemq_client_2_16_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_amqp_client_2_16_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_kafka_2_16_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_sleuth_zipkin_3_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apigw/apigw.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apigw/src/main/java/com/esekelvin/apigw/ApiGwApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -13,14 +19,22 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/customer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/customer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/esekelvin/customer/config/CustomerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/esekelvin/customer/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/esekelvin/customer/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/target/classes/com/esekelvin/customer/config/CustomerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/target/classes/com/esekelvin/customer/service/CustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/customer/target/classes/com/esekelvin/customer/service/CustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eureka_server/eureka_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka_server/eureka_server.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eureka_server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka_server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka_server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka_server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka_server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka_server/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/fraud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/fraud.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fraud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notifications/notifications.iml" beforeDir="false" afterPath="$PROJECT_DIR$/notifications/notifications.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notifications/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notifications/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notifications/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notifications/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notifications/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notifications/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +46,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -115,9 +129,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="EurekaServerApplication" />
-      <module name="eureka_server" />
+    <configuration name="FraudApplication (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.esekelvin.fraud.FraudApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.esekelvin.fraud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FraudApplication" />
         <item itemvalue="Application.CustomerApplication" />
         <item itemvalue="Application.NotificationApplication" />
-        <item itemvalue="Application.FraudApplication" />
+        <item itemvalue="Application.FraudApplication (1)" />
         <item itemvalue="Application.EurekaServerApplication (1)" />
-        <item itemvalue="Application.EurekaServerApplication" />
       </list>
     </recent_temporary>
   </component>

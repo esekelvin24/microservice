@@ -5,7 +5,7 @@ spring:
     name: customer
   datasource:
     password: abc123
-    url: jdbc:postgresql://192.168.56.101:5432/customer
+    url: jdbc:postgresql://192.168.182.128:5432/customer
     username: esekelvin
   jpa:
     hibernate:
@@ -15,6 +15,8 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
+  zipkin:
+    base-url: http://192.168.182.128:9411
 
 eureka:
   client:

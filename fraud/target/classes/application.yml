@@ -1,11 +1,12 @@
 server:
   port: 8081
+
 spring:
   application:
     name: fraud
   datasource:
     password: abc123
-    url: jdbc:postgresql://192.168.56.101:5433/fraud
+    url: jdbc:postgresql://192.168.182.128:5433/fraud
     username: esekelvin
   jpa:
     hibernate:
@@ -15,6 +16,8 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
+  zipkin:
+    base-url: http://192.168.182.128:9411
 
 eureka:
   client:

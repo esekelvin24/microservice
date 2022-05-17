@@ -6,8 +6,10 @@ spring:
     name: Notification
   datasource:
     password: abc123
-    url: jdbc:postgresql://192.168.56.101:5432/notification
+    url: jdbc:postgresql://192.168.182.128:5432/notification
     username: esekelvin
+  zipkin:
+    base-url: http://192.168.182.128:9411
   jpa:
     hibernate:
       ddl-auto: create-drop
